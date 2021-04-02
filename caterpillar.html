@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Challenge: The changing caterpillar</title>
+        <style>
+            .result {
+                font-size: 20px;
+                font-weight: bold;
+                color: blue;
+                margin-left: 300px;
+                margin-right: 200px;
+            }
+            body {text-align: center;}
+
+            .butterfly {font-family: Arial;}
+
+
+        </style>
+    </head>
+    <body>
+    <h1>The Caterpillar</h1>
+    
+    <p>This is a <strong>caterpillar</strong> in its natural habitat:</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Monarch_caterpillar_on_swan_plant_branchlet.jpg/640px-Monarch_caterpillar_on_swan_plant_branchlet.jpg" width="400">
+
+    <img class="img2" src="https://www.treehugger.com/thmb/Yf7OdVqrmmBFYQg1PXvAzVtl0wY=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/15094300928_a8a007b253_c-f0c21a8df18a46a68ee2892983bc7a06.jpg" width ="400">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        // change text of h1
+        $("h1").text("BUTTERFLIES!!");
+        //add class to h1
+        $("h1").addClass("butterfly");
+        //change text of the p element using html selector
+        $("p").html("Butterflies are beautiful creatures from afar, but up close I think they're sort of terrifying!");
+        //change picture of the src of image using attr selector
+        $("img").attr("src","https://www.kasandbox.org/programming-images/animals/butterfly_monarch.png");
+        //change height of image using height selector and 350 being height
+        $("img").height(350);
+        //selecting  src using attr selector of img2 class (second image) so it doesn't just repeat the same image
+        $(".img2").attr("src","https://i.pinimg.com/originals/22/8c/13/228c13a757fef6c8c7b593c3a463adc3.jpg")
+        //use css selector to change the font color of h1 to orange
+        $("h1").css("color","orange");
+        // use the css selector to change the p tag font-size to 20px
+        $("p").css("font-size", "20px")
+
+        /* MAKE NEW CONTENT */
+        //set a variable for the new thing (var called newThing in this case)
+        var newThing = $("<p>");
+        //focusing on var use text selector
+        newThing.text("Did you know that butterflies actually taste with their feet? Can you imagine putting a strawberry on your foot and being able to taste the juicy flavor? That would be extraordinary! To make things more interesting, there are over 165,000 butterfly species! ");
+        //use addClass selector to add new class to var
+        newThing.addClass("result");
+
+        /* TELL JQUERY WHERE TO PUT NEW ELEMENT - APPEND TO BTM OF PAGE*/
+
+        $("body").append(newThing);
+
+    </script>
+    
+    </body>
+</html>
